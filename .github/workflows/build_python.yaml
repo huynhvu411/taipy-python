@@ -30,7 +30,7 @@ jobs:
           username: ${{ secrets.DOCKERHUB_USERNAME }}
           password: ${{ secrets.DOCKERHUB_TOKEN }}
 
-      - name: Build, tag, and push image to Amazon ECR
+      - name: Build, tag, and push image
         run: |
           docker build -t $ECR_DOMAIN/$ECR_REPO:${{ steps.prep.outputs.BUILD_ID }} . --no-cache
           docker push $ECR_DOMAIN/$ECR_REPO:${{ steps.prep.outputs.BUILD_ID }}
