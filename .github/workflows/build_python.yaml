@@ -2,12 +2,11 @@ name: Build Develop
 on: 
   push:
     branches:
-      - master
+      - main
 
 env:
   ECR_DOMAIN: huynhvu411
   ECR_REPO: taipy_python
-  IMAGE_TAG: develop-${{ github.run_number }}
 
 jobs:
   build:
