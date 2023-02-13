@@ -25,6 +25,7 @@ jobs:
             echo "::set-output name=BUILD_ID::${branch}-${sha}-${ts}"  
 
       - name: Login to Docker Hub
+        uses: ./
         with:
           username: ${{ secrets.DOCKERHUB_USERNAME }}
           password: ${{ secrets.DOCKERHUB_TOKEN }}
