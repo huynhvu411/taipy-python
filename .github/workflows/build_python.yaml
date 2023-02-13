@@ -24,7 +24,7 @@ jobs:
             ts=$(date +%s)
             echo "::set-output name=BUILD_ID::${branch}-${sha}-${ts}"  
 
-        name: Login to Docker Hub
+      - name: Login to Docker Hub
         with:
           username: ${{ secrets.DOCKERHUB_USERNAME }}
           password: ${{ secrets.DOCKERHUB_TOKEN }}
