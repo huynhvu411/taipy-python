@@ -33,4 +33,4 @@ jobs:
       - name: Build, tag, and push image to Amazon ECR
         run: |
           docker build -t $ECR_DOMAIN/$ECR_REPO:${{ steps.prep.outputs.BUILD_ID }} . --no-cache
-          docker push $ECR_DOMAIN/$ECR_REPO:${{ steps.prep.outputs.BUILD_ID }} .
+          docker push $ECR_DOMAIN/$ECR_REPO:${{ steps.prep.outputs.BUILD_ID }}
